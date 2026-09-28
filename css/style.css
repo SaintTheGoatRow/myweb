@@ -1,21 +1,11 @@
-/* ==========================================================================
-   ICT251 WEB TECHNOLOGIES - ACTIVITY 2 STYLESHEET
-   Author: Dinda Nkeete
-   Description: Clean, accessible, modern, responsive CSS styles
-   ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   1. COLOR PALETTE & VARIABLES (CSS Variables)
-   -------------------------------------------------------------------------- */
-
-/* Prevent horizontal page scrolling */
 html, body {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
 }
 
-/* Ensure all elements calculate border/padding inside width */
+
 *, *::before, *::after {
     box-sizing: border-box;
 }    
@@ -35,9 +25,6 @@ html, body {
     --transition-speed: 0.25s;
 }
 
-/* --------------------------------------------------------------------------
-   2. BASE & RESET (Element Selectors)
-   -------------------------------------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -107,9 +94,7 @@ img, video {
     display: block;
 }
 
-/* --------------------------------------------------------------------------
-   3. HEADER & NAVIGATION
-   -------------------------------------------------------------------------- */
+
 .site-header {
     position: sticky;
     top: 0;
@@ -171,9 +156,7 @@ img, video {
     color: #ffffff;
 }
 
-/* --------------------------------------------------------------------------
-   4. HERO SECTION
-   -------------------------------------------------------------------------- */
+
 .hero-section {
     padding: 4.5rem 1.5rem;
     text-align: center;
@@ -236,11 +219,9 @@ img, video {
     transform: translateY(-2px);
 }
 
-/* --------------------------------------------------------------------------
-   5. GENERAL CONTENT SECTIONS (Class & Box Model Demonstration)
-   -------------------------------------------------------------------------- */
+
 .content-section {
-    /* Deliberate Box Model Demonstration required by prompt */
+   
     margin: 2rem auto;
     padding: 3rem 1.5rem;
     max-width: 1100px;
@@ -248,7 +229,7 @@ img, video {
 
 .section-container {
     background-color: var(--surface-color);
-    border: 1px solid var(--border-color); /* Visible Border Box Model */
+    border: 1px solid var(--border-color); 
     border-radius: var(--radius-md);
     padding: 2.25rem;
     box-shadow: var(--card-shadow);
@@ -259,11 +240,9 @@ img, video {
     margin-bottom: 1.75rem;
 }
 
-/* --------------------------------------------------------------------------
-   6. HOBBIES SECTION (ID Selector & List)
-   -------------------------------------------------------------------------- */
+
 #hobbies {
-    /* Unique ID Selector demonstration */
+    
     background-color: transparent;
 }
 
@@ -307,9 +286,7 @@ img, video {
     margin-bottom: 0;
 }
 
-/* --------------------------------------------------------------------------
-   7. LEARNING PLAN & TABLE
-   -------------------------------------------------------------------------- */
+
 .learning-steps {
     margin-left: 1.25rem;
     margin-bottom: 2rem;
@@ -362,9 +339,7 @@ img, video {
     background-color: rgba(248, 250, 252, 0.6);
 }
 
-/* --------------------------------------------------------------------------
-   8. PHOTO GALLERY (Full Uncropped Image View)
-   -------------------------------------------------------------------------- */
+
 .gallery-wrapper {
     width: 100%;
 }
@@ -401,9 +376,9 @@ img, video {
 
 .img-frame img {
     width: 100%;
-    height: auto; /* Displays full image without cropping */
-    max-height: 450px; /* Prevents excessively tall portrait images */
-    object-fit: contain; /* Preserves exact original photo aspect ratio */
+    height: auto; 
+    max-height: 450px; 
+    object-fit: contain; 
     display: block;
     transition: transform var(--transition-speed) ease;
 }
@@ -421,9 +396,7 @@ figcaption {
     background-color: var(--surface-color);
 }
 
-/* --------------------------------------------------------------------------
-   9. MEDIA SECTION (Full Width Display)
-   -------------------------------------------------------------------------- */
+
 .media-container-full {
     display: flex;
     flex-direction: column;
@@ -493,16 +466,14 @@ figcaption {
     color: var(--text-color);
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
     .gallery-card {
         flex: 0 0 85%;
     }
 }
 
-/* --------------------------------------------------------------------------
-   10. CONTACT FORM
-   -------------------------------------------------------------------------- */
+
 .contact-wrapper {
     max-width: 650px;
 }
@@ -575,9 +546,7 @@ figcaption {
     background-color: var(--accent-hover);
 }
 
-/* --------------------------------------------------------------------------
-   11. FOOTER
-   -------------------------------------------------------------------------- */
+
 .site-footer {
     background-color: var(--surface-color);
     border-top: 1px solid var(--border-color);
@@ -607,9 +576,7 @@ figcaption {
     font-weight: 600;
 }
 
-/* --------------------------------------------------------------------------
-   12. ANIMATIONS & REVEALS
-   -------------------------------------------------------------------------- */
+
 .reveal-section {
     opacity: 0;
     transform: translateY(20px);
@@ -621,7 +588,7 @@ figcaption {
     transform: translateY(0);
 }
 
-/* Reduced Motion Preference */
+
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -638,11 +605,9 @@ figcaption {
     }
 }
 
-/* --------------------------------------------------------------------------
-   13. RESPONSIVE DESIGN & MOBILE OVERFLOW FIXES
-   -------------------------------------------------------------------------- */
+
 @media (max-width: 768px) {
-    /* Header & Navigation Fixes */
+    
     .header-container {
         flex-direction: column;
         padding: 0.75rem 1rem;
@@ -659,13 +624,13 @@ figcaption {
         font-size: 0.85rem;
     }
 
-    /* Hero Typography Fixes */
+    
     .hero-title {
         font-size: 2rem;
         word-break: break-word;
     }
 
-    /* Content Section Container Spacing Fixes */
+    
     .content-section {
         padding: 1rem 0.75rem;
         margin: 1rem auto;
@@ -680,7 +645,7 @@ figcaption {
         box-sizing: border-box;
     }
 
-    /* Learning Schedule Table Mobile Scroll Fix */
+    
     .table-wrapper {
         width: 100%;
         overflow-x: auto;
@@ -689,10 +654,10 @@ figcaption {
     }
 
     .learning-table {
-        min-width: 480px; /* Table scrolls internally without breaking the page */
+        min-width: 480px; 
     }
 
-    /* Photo Gallery Mobile Swiping Fix */
+   
     .gallery-wrapper {
         width: 100%;
         overflow: hidden;
@@ -704,12 +669,12 @@ figcaption {
     }
 
     .gallery-card {
-        flex: 0 0 85vw; /* Sets mobile card width relative to viewport width */
+        flex: 0 0 85vw;
         min-width: 0;
         max-width: 85vw;
     }
 
-    /* Media Player & Video Width Fixes */
+    
     .media-card {
         padding: 1rem;
         width: 100%;
@@ -722,7 +687,7 @@ figcaption {
         max-width: 100%;
     }
 
-    /* Form Inputs Width Fix */
+    
     .contact-wrapper {
         width: 100%;
     }
