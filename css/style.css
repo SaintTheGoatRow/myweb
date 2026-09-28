@@ -7,6 +7,18 @@
 /* --------------------------------------------------------------------------
    1. COLOR PALETTE & VARIABLES (CSS Variables)
    -------------------------------------------------------------------------- */
+
+/* Prevent horizontal page scrolling */
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Ensure all elements calculate border/padding inside width */
+*, *::before, *::after {
+    box-sizing: border-box;
+}    
 :root {
     --bg-color: #f8fafc;
     --surface-color: #ffffff;
@@ -627,34 +639,99 @@ figcaption {
 }
 
 /* --------------------------------------------------------------------------
-   13. RESPONSIVE DESIGN (Media Queries)
+   13. RESPONSIVE DESIGN & MOBILE OVERFLOW FIXES
    -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
+    /* Header & Navigation Fixes */
     .header-container {
         flex-direction: column;
-        gap: 0.8rem;
+        padding: 0.75rem 1rem;
+        gap: 0.75rem;
     }
 
     .site-nav {
         justify-content: center;
-        gap: 0.8rem;
+        gap: 0.6rem;
+        width: 100%;
     }
 
+    .site-nav a {
+        font-size: 0.85rem;
+    }
+
+    /* Hero Typography Fixes */
     .hero-title {
-        font-size: 2.1rem;
+        font-size: 2rem;
+        word-break: break-word;
     }
 
+    /* Content Section Container Spacing Fixes */
     .content-section {
-        padding: 1.5rem 1rem;
+        padding: 1rem 0.75rem;
         margin: 1rem auto;
+        width: 100%;
+        max-width: 100%;
     }
 
     .section-container {
-        padding: 1.25rem;
+        padding: 1.25rem 1rem;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
-    /* Horizontal Swiping configuration on Mobile */
+    /* Learning Schedule Table Mobile Scroll Fix */
+    .table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin-top: 1rem;
+    }
+
+    .learning-table {
+        min-width: 480px; /* Table scrolls internally without breaking the page */
+    }
+
+    /* Photo Gallery Mobile Swiping Fix */
+    .gallery-wrapper {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .gallery-container {
+        padding: 0.5rem 0.25rem 1rem 0.25rem;
+        gap: 1rem;
+    }
+
     .gallery-card {
-        flex: 0 0 85%;
+        flex: 0 0 85vw; /* Sets mobile card width relative to viewport width */
+        min-width: 0;
+        max-width: 85vw;
+    }
+
+    /* Media Player & Video Width Fixes */
+    .media-card {
+        padding: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .video-container video, 
+    .audio-container audio {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Form Inputs Width Fix */
+    .contact-wrapper {
+        width: 100%;
+    }
+
+    .form-group input, 
+    .form-group select, 
+    .form-group textarea {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 }
