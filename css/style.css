@@ -700,3 +700,155 @@ figcaption {
         box-sizing: border-box;
     }
 }
+/* ==========================================================================
+   Activity 3 Interactive Additions
+   ========================================================================== */
+
+/* Dark Theme Palette */
+body.dark-theme {
+    --bg-color: #0f172a;
+    --surface-color: #1e293b;
+    --text-color: #f8fafc;
+    --muted-color: #94a3b8;
+    --accent-color: #3b82f6;
+    --accent-hover: #60a5fa;
+    --border-color: #334155;
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+/* Theme Switcher Button */
+.btn-theme-toggle {
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all var(--transition-speed) ease;
+}
+
+.btn-theme-toggle:hover {
+    border-color: var(--accent-color);
+}
+
+/* Form Error Messages & Local Preview */
+.error-feedback {
+    color: #dc2626;
+    font-size: 0.82rem;
+    font-weight: 600;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+.form-preview-box {
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+    background-color: var(--bg-color);
+    border: 2px dashed var(--accent-color);
+    border-radius: var(--radius-sm);
+}
+
+.form-preview-box h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+}
+
+.preview-disclaimer {
+    font-size: 0.85rem;
+    color: var(--muted-color);
+    margin-bottom: 0.75rem;
+}
+
+.preview-details {
+    list-style: none;
+    font-size: 0.9rem;
+}
+
+.preview-details li {
+    padding: 0.3rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Gallery Controls */
+.gallery-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-gallery {
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+}
+
+.btn-gallery:hover {
+    background-color: var(--accent-color);
+    color: #ffffff;
+}
+
+/* Calculator Card */
+.calc-card {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+}
+
+.calc-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-bottom: 1rem;
+}
+
+.calc-form-group input {
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    max-width: 250px;
+}
+
+.calc-output {
+    margin-top: 1rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Mobile Nav Toggle Button */
+.nav-toggle-btn {
+    display: none;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-toggle-btn {
+        display: block;
+    }
+
+    .site-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 0.75rem;
+    }
+
+    .site-nav.nav-open {
+        display: flex;
+    }
+}
